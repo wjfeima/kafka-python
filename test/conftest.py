@@ -43,14 +43,6 @@ def kafka_broker_factory(version, zookeeper):
         broker.close()
 
 @pytest.fixture
-def simple_client(kafka_broker, request, topic):
-    """Return a SimpleClient fixture"""
-    client = kafka_broker.get_simple_client(client_id='%s_client' % (request.node.name,))
-    client.ensure_topic_exists(topic)
-    yield client
-    client.close()
-
-@pytest.fixture
 def kafka_client(kafka_broker, request):
     """Return a KafkaClient fixture"""
     (client,) = kafka_broker.get_clients(cnt=1, client_id='%s_client' % (request.node.name,))
