@@ -67,6 +67,7 @@ class Dict(dict):
     pass
 
 
+# TODO what is the purpose of this? It has been unused since it was originally added
 def try_method_on_system_exit(obj, method, *args, **kwargs):
     def wrapper(_obj, _meth, *args, **kwargs):
         try:

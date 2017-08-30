@@ -114,6 +114,7 @@ class SimpleBufferPool(object):
         with self._lock:
             return len(self._waiters)
 
+# TODO should this be removed or finished?
 '''
 class BufferPool(object):
     """

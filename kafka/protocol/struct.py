@@ -65,6 +65,7 @@ class Struct(AbstractType):
                 return False
         return True
 
+# TODO should this be removed or finished?
 """
 class MetaStruct(type):
     def __new__(cls, clsname, bases, dct):
